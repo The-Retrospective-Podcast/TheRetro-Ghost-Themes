@@ -28,8 +28,8 @@ jobs:
       - name: Deploy theme
         uses: TryGhost/action-deploy-theme@v1
         with:
-          api-url: ${{ secrets.WAVE_GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.WAVE_GHOST_ADMIN_API_KEY }}
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
           working-directory: packages/wave
   subtree:
     name: Subtree
@@ -44,5 +44,5 @@ jobs:
         with:
           repo: 'TryGhost/Wave'
           path: 'packages/wave'
-          deploy_key: ${{secrets.WAVE_GITHUB_DEPLOY_KEY}}
+          deploy_key: ${{secrets.GITHUB_DEPLOY_KEY}}
           force: true
